@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LogiNews — National Logistics Company Blog & News</title>
+  <meta name="description" content="Insights, updates and stories from the National Logistics Company." />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:  '#eff6ff',
+              100: '#dbeafe',
+              500: '#2563eb',
+              600: '#1d4ed8',
+              700: '#1e40af',
+              900: '#1e3a8a',
+            },
+            ink: {
+              50:  '#f8fafc',
+              100: '#f1f5f9',
+              700: '#334155',
+              800: '#1e293b',
+              900: '#0f172a',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['Merriweather', 'Georgia', 'serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-ink-50 text-ink-900 font-sans antialiased">
+
+  <!-- Skip link for accessibility -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-brand-600 focus:text-white focus:px-4 focus:py-2 focus:rounded">Skip to content</a>
+
+  <!-- HEADER (injected by components.js) -->
+  <div id="site-header"></div>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="bg-gradient-to-br from-brand-700 via-brand-600 to-brand-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <span class="inline-block text-xs font-semibold tracking-widest uppercase bg-white/15 px-3 py-1 rounded-full mb-4">
+            National Logistics Company
+          </span>
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
+            News, insights and stories from the road
+          </h1>
+          <p class="text-white/80 text-lg mb-6 max-w-xl">
+            Freight, supply chain, warehousing and last-mile delivery — written by the people who move your world.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#latest" class="bg-white text-brand-700 font-semibold px-5 py-3 rounded-lg hover:bg-ink-100 transition">Read latest</a>
+            <a href="contact.html" class="border border-white/40 text-white font-semibold px-5 py-3 rounded-lg hover:bg-white/10 transition">Talk to us</a>
+          </div>
+        </div>
+<div class="hidden md:block">
+    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1600&q=80"
+        alt="Logistics trucks on the road" class="rounded-2xl shadow-2xl w-full h-80 object-cover" loading="lazy"
+        onerror="this.onerror=null;this.src='https://placehold.co/1600x900/1e40af/ffffff?text=LogiNews';" />
+</div>
+      </div>
+    </section>
+
+    <!-- CATEGORY FILTER -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+      <div class="flex flex-wrap items-center gap-2" id="category-filter" aria-label="Filter by category">
+        <!-- Category buttons injected -->
+      </div>
+    </section>
+
+    <!-- FEATURED POSTS -->
+    <section id="latest" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="flex items-end justify-between mb-6">
+        <h2 class="text-2xl sm:text-3xl font-bold">Latest stories</h2>
+        <a href="category.html?slug=all" class="text-brand-600 hover:text-brand-700 font-medium text-sm">View all →</a>
+      </div>
+
+      <!-- Featured grid -->
+      <div id="featured-posts" class="grid md:grid-cols-2 gap-8 mb-12">
+        <!-- Injected -->
+      </div>
+
+      <!-- Standard grid -->
+      <div id="posts-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Injected -->
+      </div>
+
+      <!-- Load more -->
+      <div class="text-center mt-10">
+        <button id="load-more" class="bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 py-3 rounded-lg transition disabled:opacity-50">
+          Load more stories
+        </button>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="bg-ink-900 text-white mt-16">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14 text-center">
+        <h2 class="text-2xl sm:text-3xl font-bold mb-3">Get logistics news in your inbox</h2>
+        <p class="text-white/70 mb-6">One email a week. No spam. Unsubscribe anytime.</p>
+        <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" novalidate>
+          <input type="email" name="email" required placeholder="you@company.com"
+                 class="flex-1 px-4 py-3 rounded-lg text-ink-900 focus:outline-none focus:ring-2 focus:ring-brand-500" />
+          <button type="submit" class="bg-brand-600 hover:bg-brand-500 font-semibold px-6 py-3 rounded-lg transition">
+            Subscribe
+          </button>
+        </form>
+        <p id="newsletter-msg" class="text-sm mt-3 text-white/70" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (injected) -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/cms.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

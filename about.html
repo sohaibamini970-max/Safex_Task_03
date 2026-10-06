@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — LogiNews</title>
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { 50: '#eff6ff', 100: '#dbeafe', 500: '#2563eb', 600: '#1d4ed8', 700: '#1e40af', 900: '#1e3a8a' },
+                        ink: { 50: '#f8fafc', 100: '#f1f5f9', 700: '#334155', 800: '#1e293b', 900: '#0f172a' }
+                    },
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], serif: ['Merriweather', 'Georgia', 'serif'] },
+                }
+            }
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-ink-50 text-ink-900 font-sans antialiased">
+    <div id="site-header"></div>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+        <p class="text-sm text-brand-600 font-semibold uppercase tracking-widest mb-3">About</p>
+        <h1 class="text-3xl sm:text-4xl font-bold mb-6">Moving your world, one story at a time</h1>
+        <p class="text-lg text-ink-700 mb-6">
+            LogiNews is the editorial arm of the National Logistics Company. We publish insights, updates and
+            field stories from across freight, warehousing, cold chain, and last-mile delivery.
+        </p>
+        <div class="grid sm:grid-cols-3 gap-6 mt-10">
+            <div class="bg-white rounded-xl p-6 shadow-sm">
+                <p class="text-3xl font-bold text-brand-600">40+</p>
+                <p class="text-ink-700 text-sm mt-1">Years on the road</p>
+            </div>
+            <div class="bg-white rounded-xl p-6 shadow-sm">
+                <p class="text-3xl font-bold text-brand-600">1,200</p>
+                <p class="text-ink-700 text-sm mt-1">Vehicles in fleet</p>
+            </div>
+            <div class="bg-white rounded-xl p-6 shadow-sm">
+                <p class="text-3xl font-bold text-brand-600">98.6%</p>
+                <p class="text-ink-700 text-sm mt-1">On-time delivery</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="site-footer"></div>
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/components.js"></script>
+</body>
+
+</html>

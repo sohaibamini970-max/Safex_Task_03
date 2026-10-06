@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Category — LogiNews</title>
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { 50: '#eff6ff', 100: '#dbeafe', 500: '#2563eb', 600: '#1d4ed8', 700: '#1e40af', 900: '#1e3a8a' },
+                        ink: { 50: '#f8fafc', 100: '#f1f5f9', 700: '#334155', 800: '#1e293b', 900: '#0f172a' }
+                    },
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], serif: ['Merriweather', 'Georgia', 'serif'] },
+                }
+            }
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-ink-50 text-ink-900 font-sans antialiased">
+    <a href="#main"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-brand-600 focus:text-white focus:px-4 focus:py-2 focus:rounded">Skip
+        to content</a>
+
+    <div id="site-header"></div>
+
+    <main id="main" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <header class="mb-8">
+            <p class="text-sm text-brand-600 font-semibold uppercase tracking-widest mb-2">Category</p>
+            <h1 id="category-title" class="text-3xl sm:text-4xl font-bold mb-2">All stories</h1>
+            <p id="category-desc" class="text-ink-700 max-w-2xl"></p>
+        </header>
+
+        <div id="category-posts" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+        <div class="text-center mt-10">
+            <button id="load-more"
+                class="bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 py-3 rounded-lg transition disabled:opacity-50">
+                Load more
+            </button>
+        </div>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/cms.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/category.js"></script>
+</body>
+
+</html>
